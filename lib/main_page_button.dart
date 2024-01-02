@@ -5,14 +5,15 @@ class MainPageButton extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return TextButton(
+    return OutlinedButton.icon(
         onPressed: () {},
-        style: TextButton.styleFrom(
+        style: OutlinedButton.styleFrom(
           foregroundColor: Colors.white,
           textStyle: const TextStyle(
             fontSize: 16,
           ),
         ),
-        child: const Text('Start Quiz'));
+        icon: const Icon(Icons.arrow_right_alt),
+        label: const Text('Start Quiz'));
   }
 }
