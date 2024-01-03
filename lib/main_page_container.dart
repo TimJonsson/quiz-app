@@ -4,19 +4,21 @@ import 'package:quiz_app/main_page_text.dart';
 import 'package:quiz_app/quiz_logo.dart';
 
 class MainPageContainer extends StatelessWidget {
-  const MainPageContainer({super.key});
+  const MainPageContainer(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(context) {
-    return const Center(
+    return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            QuizLogo(),
-            SizedBox(height: 30),
-            MainPageText(),
-            SizedBox(height: 20),  
-            MainPageButton(),
+            const QuizLogo(),
+            const SizedBox(height: 30),
+            const MainPageText(),
+            const SizedBox(height: 20),  
+            MainPageButton(startQuiz),
           ],
         ),
       );
