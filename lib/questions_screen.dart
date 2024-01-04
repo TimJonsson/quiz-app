@@ -31,7 +31,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            ...currentQuestion.answers.map((answer) {
+            ...currentQuestion.getShuffledAnswers().map((answer) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5), // Adjust the vertical spacing
                 child: AnswerButton(answerText: answer, onTap: () {}),
