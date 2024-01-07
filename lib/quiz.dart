@@ -13,11 +13,16 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   var activeScreen = 'main-page-container';
+  final List<String> selectedAnswers = [];
 
   void switchScreen() {
     setState(() {
       activeScreen = 'questions-screen';
     });
+  }
+
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
   }
 
   @override
@@ -26,7 +31,7 @@ class _QuizState extends State<Quiz> {
       home: Scaffold(
         body: Container(
           color: Colors.purple,
-          child: activeScreen == 'main-page-container' ? MainPageContainer(switchScreen): const QuestionScreen(),
+          child: activeScreen == 'main-page-container' ? MainPageContainer(switchScreen): QuestionScreen(onSelectedAnswer: chooseAnswer),
         ),
       ),
     );
