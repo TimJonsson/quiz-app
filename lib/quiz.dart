@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/main_page_container.dart';
+import 'package:quiz_app/start_screen.dart';
 import 'package:quiz_app/questions_screen.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/results_screen.dart';
@@ -15,10 +15,10 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   static const questionsScreen = 'questions-screen';
-  static const mainPageContainer = 'main-page-container';
+  static const startScreen = 'start-screen';
   static const resultsScreen = 'results-screen';
 
-  var activeScreen = mainPageContainer;
+  var activeScreen = startScreen;
   List<String> selectedAnswers = [];
 
   void switchScreen() {
@@ -49,7 +49,7 @@ class _QuizState extends State<Quiz> {
         screenWidget = const ResultsScreen();
         break;
       default:
-        screenWidget = MainPageContainer(switchScreen);
+        screenWidget = StartScreen(switchScreen);
     }
 
     return screenWidget;
