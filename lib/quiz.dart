@@ -21,7 +21,7 @@ class _QuizState extends State<Quiz> {
   var activeScreen = startScreen;
   List<String> selectedAnswers = [];
 
-  void switchScreen() {
+  void startQuiz() {
     setState(() {
       activeScreen = questionsScreen;
     });
@@ -37,6 +37,13 @@ class _QuizState extends State<Quiz> {
     }
   }
 
+  void restartQuiz() {
+    setState(() {
+      activeScreen = startScreen;
+      selectedAnswers = [];
+    });
+  }
+
   Widget screenToShow(screen) {
     Widget screenWidget;
 
@@ -45,10 +52,10 @@ class _QuizState extends State<Quiz> {
         screenWidget = QuestionScreen(onSelectedAnswer: chooseAnswer);
         break;
       case resultsScreen:
-        screenWidget = ResultsScreen(chosenAnswers: selectedAnswers);
+        screenWidget = ResultsScreen(chosenAnswers: selectedAnswers, restartQuiz: restartQuiz,);
         break;
       default:
-        screenWidget = StartScreen(switchScreen);
+        screenWidget = StartScreen(startQuiz);
     }
 
     return screenWidget;
