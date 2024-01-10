@@ -6,6 +6,8 @@ class MainPageText extends StatelessWidget {
   @override
   Widget build(context) {
     return const Text("Learn Flutter the fun way!",
-      style: TextStyle(color: Colors.white));
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 20));
   }
 }

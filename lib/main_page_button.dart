@@ -14,7 +14,7 @@ class MainPageButton extends StatelessWidget {
         style: OutlinedButton.styleFrom(
           foregroundColor: Colors.white,
           textStyle: const TextStyle(
-            fontSize: 16,
+            fontSize: 18,
           ),
         ),
         icon: const Icon(Icons.arrow_right_alt),
