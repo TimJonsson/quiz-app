@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/main_page_button.dart';
-import 'package:quiz_app/main_page_text.dart';
-import 'package:quiz_app/quiz_logo.dart';
+import 'package:quiz_app/start_screen/start_screen_button.dart';
+import 'package:quiz_app/start_screen/start_screen_header.dart';
+import 'package:quiz_app/start_screen/quiz_logo.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
@@ -16,9 +16,9 @@ class StartScreen extends StatelessWidget {
           children: [
             const QuizLogo(),
             const SizedBox(height: 30),
-            const MainPageText(),
+          const StartScreenHeader(),
             const SizedBox(height: 20),  
-            MainPageButton(startQuiz),
+          StartScreenButton(startQuiz),
           ],
         ),
       );
