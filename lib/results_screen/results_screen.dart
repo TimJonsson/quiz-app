@@ -41,7 +41,9 @@ class ResultsScreen extends StatelessWidget {
             style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
+              fontWeight: FontWeight.bold
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 30,
@@ -65,7 +67,7 @@ class ResultsScreen extends StatelessWidget {
                     width: 10), 
                 Text(
                   "Restart Quiz!",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ],
             ),

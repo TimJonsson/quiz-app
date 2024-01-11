@@ -6,6 +6,7 @@ class StartScreenHeader extends StatelessWidget {
   @override
   Widget build(context) {
     return const Text("Learn Flutter the fun way!",
-        style: TextStyle(color: Colors.white, fontSize: 20));
+        style: TextStyle(
+            color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold));
   }
 }
